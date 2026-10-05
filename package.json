@@ -1,0 +1,16 @@
+{
+  "name": "vintage-bulb-experience",
+  "version": "1.0.0",
+  "description": "Volta & Co. Artisanal Vintage Bulb & Edison Lighting Experience",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run start",
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

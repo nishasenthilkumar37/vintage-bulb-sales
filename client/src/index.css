@@ -1,0 +1,228 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-cinzel: "Cinzel", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* ==========================================================================
+   5 HIGH-CONVERSION LUXURY SELLING THEMES
+   ========================================================================== */
+
+/* 1. Theme: Obsidian & Imperial Gold (Default Luxury High-End) */
+.theme-obsidian-gold {
+  --bg-primary: #070709;
+  --bg-secondary: #0f1015;
+  --bg-card: #151720;
+  --bg-card-hover: #1c1f2b;
+  --bg-accent: #25293a;
+  
+  --accent-gold: #f59e0b;
+  --accent-light: #fbbf24;
+  --accent-glow: rgba(245, 158, 11, 0.45);
+  --accent-border: rgba(245, 158, 11, 0.35);
+  
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  
+  --metal-gradient: linear-gradient(135deg, #fde047 0%, #d97706 60%, #78350f 100%);
+  --badge-bg: rgba(245, 158, 11, 0.15);
+  --badge-text: #fde047;
+}
+
+/* 2. Theme: Emerald Velvet & Burnished Brass (Prestige Heritage) */
+.theme-emerald-brass {
+  --bg-primary: #040d09;
+  --bg-secondary: #081711;
+  --bg-card: #0e231b;
+  --bg-card-hover: #143126;
+  --bg-accent: #1b3f31;
+  
+  --accent-gold: #10b981;
+  --accent-light: #34d399;
+  --accent-glow: rgba(16, 185, 129, 0.45);
+  --accent-border: rgba(16, 185, 129, 0.35);
+  
+  --text-primary: #f0fdf4;
+  --text-secondary: #bbf7d0;
+  --text-muted: #86efac;
+  
+  --metal-gradient: linear-gradient(135deg, #6ee7b7 0%, #059669 60%, #064e3b 100%);
+  --badge-bg: rgba(16, 185, 129, 0.15);
+  --badge-text: #a7f3d0;
+}
+
+/* 3. Theme: Midnight Sapphire & Warm Tungsten (Modern Architectural) */
+.theme-sapphire-platinum {
+  --bg-primary: #050814;
+  --bg-secondary: #0b1124;
+  --bg-card: #111a36;
+  --bg-card-hover: #18254b;
+  --bg-accent: #213263;
+  
+  --accent-gold: #38bdf8;
+  --accent-light: #7dd3fc;
+  --accent-glow: rgba(56, 189, 248, 0.45);
+  --accent-border: rgba(56, 189, 248, 0.35);
+  
+  --text-primary: #f0f9ff;
+  --text-secondary: #bae6fd;
+  --text-muted: #7dd3fc;
+  
+  --metal-gradient: linear-gradient(135deg, #7dd3fc 0%, #0284c7 60%, #0c4a6e 100%);
+  --badge-bg: rgba(56, 189, 248, 0.15);
+  --badge-text: #bae6fd;
+}
+
+/* 4. Theme: Royal Burgundy & Antique Rose Copper (Romantic Speakeasy) */
+.theme-burgundy-copper {
+  --bg-primary: #120609;
+  --bg-secondary: #1c0b11;
+  --bg-card: #28101a;
+  --bg-card-hover: #371725;
+  --bg-accent: #491f32;
+  
+  --accent-gold: #f43f5e;
+  --accent-light: #fb7185;
+  --accent-glow: rgba(244, 63, 94, 0.45);
+  --accent-border: rgba(244, 63, 94, 0.35);
+  
+  --text-primary: #fff1f2;
+  --text-secondary: #fecdd3;
+  --text-muted: #fda4af;
+  
+  --metal-gradient: linear-gradient(135deg, #fda4af 0%, #e11d48 60%, #881337 100%);
+  --badge-bg: rgba(244, 63, 94, 0.15);
+  --badge-text: #fecdd3;
+}
+
+/* 5. Theme: Warm Steampunk Espresso & Honey Cognac */
+.theme-espresso {
+  --bg-primary: #0b0907;
+  --bg-secondary: #14100c;
+  --bg-card: #1f1812;
+  --bg-card-hover: #2b221a;
+  --bg-accent: #3a2e23;
+  
+  --accent-gold: #f59e0b;
+  --accent-light: #fbbf24;
+  --accent-glow: rgba(245, 158, 11, 0.45);
+  --accent-border: rgba(245, 158, 11, 0.35);
+  
+  --text-primary: #faf6ee;
+  --text-secondary: #dfcaa8;
+  --text-muted: #9b7c58;
+  
+  --metal-gradient: linear-gradient(135deg, #e6c887 0%, #c89d53 60%, #78350f 100%);
+  --badge-bg: rgba(245, 158, 11, 0.15);
+  --badge-text: #fef08a;
+}
+
+/* Base Body Styles */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--bg-accent);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold);
+}
+
+/* Atmospheric Glow Background */
+.theme-glow-bg {
+  background: radial-gradient(circle at 50% 20%, var(--accent-glow) 0%, transparent 65%);
+}
+
+.vintage-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Selling Gradients */
+.gold-text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, var(--accent-light) 40%, var(--accent-gold) 85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-btn-gradient {
+  background: linear-gradient(135deg, var(--accent-light) 0%, var(--accent-gold) 60%, #b45309 100%);
+  color: #0b0907;
+  font-weight: 700;
+}
+
+.gold-btn-gradient:hover {
+  filter: brightness(1.1);
+}
+
+/* Range input styling for vintage brass dimmer */
+input[type=range].vintage-dimmer {
+  -webkit-appearance: none;
+  background: var(--bg-accent);
+  height: 6px;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type=range].vintage-dimmer::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffffff, var(--accent-gold) 60%, #78350f);
+  cursor: pointer;
+  border: 2px solid var(--accent-light);
+  box-shadow: 0 0 15px var(--accent-glow);
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+input[type=range].vintage-dimmer::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 25px var(--accent-glow);
+}
+
+/* Pulsing ember particles */
+@keyframes emberFloat {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-120px) translateX(25px) scale(0.3);
+    opacity: 0;
+  }
+}
+
+/* Shimmer animation for sales badges */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s infinite;
+}
