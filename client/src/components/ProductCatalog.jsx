@@ -168,13 +168,13 @@ export const ProductCatalog = ({
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredProducts.map((product) => {
-              const pId = product._id || product.id;
+            {filteredProducts.map((product, idx) => {
+              const pId = String(product?._id || product?.id || `prod_${idx}`);
               const isBulbLit = activeCardBulbs[pId] !== false;
-              const isRecentlyAdded = addedItemIds[pId];
+              const isRecentlyAdded = !!addedItemIds[pId];
 
               // Simulated stock left and viewers for high-conversion social proof
-              const stockRemaining = Math.max(3, (product.stock || 25) % 12);
+              const stockRemaining = Math.max(3, (Number(product?.stock) || 25) % 12);
               const activeViewers = Math.max(5, (pId.length * 3) % 18 + 4);
 
               return (

@@ -1,5 +1,7 @@
 export const seedProducts = [
   {
+    _id: "seed-prod-1",
+    id: "seed-prod-1",
     name: "The 1893 Edison Squirrel Cage",
     subtitle: "Historical ST64 Hand-Spun Tungsten Filament",
     category: "Edison Classics",
@@ -38,6 +40,8 @@ export const seedProducts = [
     dimensions: { height: "142mm", diameter: "64mm" }
   },
   {
+    _id: "seed-prod-2",
+    id: "seed-prod-2",
     name: "Titan G125 Spiral Helix Globe",
     subtitle: "Grand Oversized Statement Filament Globe",
     category: "Oversized Globes",
@@ -76,6 +80,8 @@ export const seedProducts = [
     dimensions: { height: "175mm", diameter: "125mm" }
   },
   {
+    _id: "seed-prod-3",
+    id: "seed-prod-3",
     name: "Victorian Quad-Loop Tubular T45",
     subtitle: "Slender Industrial Exposed Filament",
     category: "Edison Classics",
@@ -113,6 +119,8 @@ export const seedProducts = [
     dimensions: { height: "110mm", diameter: "45mm" }
   },
   {
+    _id: "seed-prod-4",
+    id: "seed-prod-4",
     name: "The Marconi Radio Valve Lamp",
     subtitle: "Early 20th Century Vacuum Tube Ambiance",
     category: "Vintage LEDs",
@@ -150,6 +158,8 @@ export const seedProducts = [
     dimensions: { height: "135mm", diameter: "58mm" }
   },
   {
+    _id: "seed-prod-5",
+    id: "seed-prod-5",
     name: "Geometric Diamond Facet Amber",
     subtitle: "Art Deco Prismatic Filament Gem",
     category: "Spiral & Smoked",
@@ -187,6 +197,8 @@ export const seedProducts = [
     dimensions: { height: "150mm", diameter: "95mm" }
   },
   {
+    _id: "seed-prod-6",
+    id: "seed-prod-6",
     name: "The G200 Monumental Emperor Globe",
     subtitle: "Epic 200mm Diameter Giant Statement Globe",
     category: "Oversized Globes",
@@ -224,6 +236,8 @@ export const seedProducts = [
     dimensions: { height: "260mm", diameter: "200mm" }
   },
   {
+    _id: "seed-prod-7",
+    id: "seed-prod-7",
     name: "Candelabra Flame Tip CA35",
     subtitle: "Chandelier Flickering Vintage Flame",
     category: "Vintage LEDs",
@@ -261,6 +275,8 @@ export const seedProducts = [
     dimensions: { height: "120mm", diameter: "35mm" }
   },
   {
+    _id: "seed-prod-8",
+    id: "seed-prod-8",
     name: "The Steampunk Heavy Cast Brass Pendant Kit",
     subtitle: "Solid Brass Socket, Twisted Fabric Cord & Ceramic Switch",
     category: "Steampunk Fixtures",
@@ -301,7 +317,9 @@ export const seedProducts = [
 
 export const seedReviews = [
   {
-    productId: "seed-1",
+    _id: "seed-rev-1",
+    id: "seed-rev-1",
+    productId: "seed-prod-1",
     author: "Julian Vance",
     rating: 5,
     title: "The warmest, most enchanting glow in our townhouse",
@@ -312,7 +330,9 @@ export const seedReviews = [
     ambianceSetting: "Dining Room Chandelier"
   },
   {
-    productId: "seed-2",
+    _id: "seed-rev-2",
+    id: "seed-rev-2",
+    productId: "seed-prod-2",
     author: "Elena Rostova",
     rating: 5,
     title: "An absolute showpiece over our coffee bar",
@@ -323,7 +343,9 @@ export const seedReviews = [
     ambianceSetting: "Espresso Bar Island"
   },
   {
-    productId: "seed-3",
+    _id: "seed-rev-3",
+    id: "seed-rev-3",
+    productId: "seed-prod-3",
     author: "Marcus Sterling",
     rating: 5,
     title: "Perfect industrial aesthetic with zero hum",

@@ -86,9 +86,9 @@ export const ReviewsSection = ({
 
         {/* Reviews Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {reviews.map((rev) => {
-            const rId = rev._id || rev.id;
-            const isLiked = likedReviews[rId];
+          {reviews.map((rev, idx) => {
+            const rId = String(rev?._id || rev?.id || `rev_${idx}`);
+            const isLiked = !!likedReviews[rId];
             return (
               <motion.div
                 key={rId}
